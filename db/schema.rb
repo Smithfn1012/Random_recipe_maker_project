@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_194639) do
+ActiveRecord::Schema.define(version: 2020_06_02_213744) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2020_06_02_194639) do
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "recipe_link"
+    t.string "image_link"
   end
 
   add_foreign_key "ingredients_recipes", "ingredients"

@@ -1,0 +1,2 @@
+class AddRecipeLinkToRecipe < ApplicationRecord
+end
