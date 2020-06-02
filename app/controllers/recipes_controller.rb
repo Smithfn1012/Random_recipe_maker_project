@@ -20,4 +20,10 @@ class RecipesController < ApplicationController
         
         render json: RecipeSerializer.new(recipe)
     end
+
+    private
+
+    def recipe_params
+        params.require(:recipe).permit(:title, :recipe_link, :image_link)
+    end
 end
