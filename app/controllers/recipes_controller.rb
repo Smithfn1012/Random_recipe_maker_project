@@ -5,4 +5,10 @@ class RecipesController < ApplicationController
 
         render json: RecipeSerializer.new(recipes)
     end
+
+    def show
+        recipes = Ingredient.find_by(name: params[:ingredient_name]).recipes
+
+        render json: RecipeSterilizer.new(recipes.sample)
+    end
 end
